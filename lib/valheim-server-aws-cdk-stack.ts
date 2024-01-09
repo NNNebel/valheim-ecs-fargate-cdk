@@ -140,7 +140,7 @@ export class ValheimServerAwsCdkStack extends Stack {
 
     container.addMountPoints(mountPoint);
 
-    this.valheimService = new FargateService(this, "valheimService", {
+    this.valheimService = new FargateService(this, "vmService", {
       cluster: this.fargateCluster,
       taskDefinition: valheimTaskDefinition,
       desiredCount: 1,

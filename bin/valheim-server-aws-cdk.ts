@@ -65,7 +65,7 @@ const app = new App();
 const worldAssetLocations = getWorldAssetLocations();
 const APPGW_START_STOP_PASSWORD = process.env.APPGW_START_STOP_PASSWORD;
 
-new ValheimServer(app, "ValheimServer", {
+new ValheimServer(app, "VmServer", {
     worldAssetLocations,
     addAppGatewayStartStopStatus: !APPGW_START_STOP_PASSWORD || APPGW_START_STOP_PASSWORD !== "changeme",
     appGatewayStartStopPassword: APPGW_START_STOP_PASSWORD,
