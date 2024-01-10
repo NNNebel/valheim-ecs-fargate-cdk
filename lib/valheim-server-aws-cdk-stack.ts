@@ -154,9 +154,15 @@ export class VmServerAwsCdkStack extends Stack {
     this.valheimService.connections.allowFromAnyIpv4(
       new Port({
         protocol: Protocol.UDP,
-        stringRepresentation: "valheimPorts",
+        stringRepresentation: "vmPorts",
         fromPort: 2456,
         toPort: 2458,
+      }),
+      new Port({
+        protocol: Protocol.TCP,
+        stringRepresentation: "supervisordPorts",
+        fromPort: 9009,
+        toPort: 9009,
       })
     );
   }
