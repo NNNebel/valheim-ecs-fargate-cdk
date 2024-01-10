@@ -58,7 +58,7 @@ export class VmServerAwsCdkStack extends Stack {
       vpc: vpc,
     });
 
-    const serverFileSystem = new FileSystem(this, "valheimServerStorage", {
+    const serverFileSystem = new FileSystem(this, "vmServerStorage", {
       vpc: vpc,
       encrypted: true,
     });
