@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import "source-map-support/register";
-import { ValheimServerAwsCdkStack } from "../lib/valheim-server-aws-cdk-stack";
+import { VmServerAwsCdkStack } from "../lib/valheim-server-aws-cdk-stack";
 import { LambdaEcsFargateUpdownstatusStack } from '../lib/lambda-ecs-fargate-updownstatus-stack';
 import { Construct } from "constructs";
 import { Annotations, App, Fn } from "aws-cdk-lib";
@@ -34,7 +34,7 @@ class ValheimServer extends Construct {
             Annotations.of(this).addError(`${BOOTSTRAP_WITH_WORLD_NAME} does not exist in the resources/worlds directory!`);
         }
         
-        const ecsStack = new ValheimServerAwsCdkStack(this, "ValheimServerAwsCdkStack", {
+        const ecsStack = new VmServerAwsCdkStack(this, "VmServerAwsCdkStack", {
             worldBootstrapLocation: worldBootstrapResourcesStack ? BOOTSTRAP_WITH_WORLD_NAME : undefined,
             worldResourcesBucket: worldBootstrapResourcesStack?.bucket
         });

@@ -22,7 +22,7 @@ interface ValheimServerAwsCdkStackProps extends StackProps {
 
 const ACTUAL_VALHEIM_WORLD_LOCATION = "/config/";
 
-export class ValheimServerAwsCdkStack extends Stack {
+export class VmServerAwsCdkStack extends Stack {
 
   readonly valheimService: FargateService;
   readonly fargateCluster: Cluster;
