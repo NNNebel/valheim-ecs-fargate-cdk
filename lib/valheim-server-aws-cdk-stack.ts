@@ -81,8 +81,8 @@ export class VmServerAwsCdkStack extends Stack {
       "valheimTaskDefinition",
       {
         compatibility: Compatibility.FARGATE,
-        cpu: "2048",
-        memoryMiB: "4096",
+        cpu: "4096",
+        memoryMiB: "8192",
         volumes: [serverVolumeConfig],
         networkMode: NetworkMode.AWS_VPC,
       }
